@@ -1,2 +1,3 @@
 # Crowdfunding_ETL
-Project #2, Mini ETL project/
+Repository for Project #2
+
