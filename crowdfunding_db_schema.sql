@@ -8,7 +8,7 @@ BEGIN TRANSACTION QUICKDBD
 
 CREATE TABLE [campaign] (
     [cf_id] VARCHAR(255)  NOT NULL ,
-    [contact_id] INTEGER  NOT NULL ,
+    [contact_id] VARCHAR(255)  NOT NULL ,
     [company_name] VARCHAR(255)  NOT NULL ,
     [description] TEXT  NOT NULL ,
     [goal] DECIMAL  NOT NULL ,
@@ -24,20 +24,20 @@ CREATE TABLE [campaign] (
 )
 
 CREATE TABLE [category] (
-    [category_id] INTEGER  NOT NULL ,
-    [category] INTEGER  NOT NULL 
+    [category_id] VARCHAR(255)  NOT NULL ,
+    [category] VARCHAR(255)  NOT NULL 
 )
 
 CREATE TABLE [contacts] (
-    [contact_id] INTEGER  NOT NULL ,
+    [contact_id] VARCHAR(255)  NOT NULL ,
     [first_name] VARCHAR(255)  NOT NULL ,
     [last_name] VARCHAR(255)  NOT NULL ,
     [email] VARCHAR(255)  NOT NULL 
 )
 
 CREATE TABLE [subcategory] (
-    [subcategory_id] INTEGER  NOT NULL ,
-    [category] INTEGER  NOT NULL 
+    [subcategory_id] VARCHAR(255)  NOT NULL ,
+    [category] VARCHAR(255)  NOT NULL 
 )
 
 ALTER TABLE [campaign] WITH CHECK ADD CONSTRAINT [FK_campaign_category_id] FOREIGN KEY([category_id])
